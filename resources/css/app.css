@@ -1,0 +1,59 @@
+/* Import Bootstrap 5 & Bootstrap Icons dari NPM */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Styling Global Dark Mode & Aksen Oranye UTS */
+body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Warna & Tombol Aksen Oranye */
+.text-orange { color: #ff6600 !important; }
+.bg-orange { background-color: #ff6600 !important; color: #fff; }
+.border-orange { border-color: #ff6600 !important; }
+
+.btn-orange {
+    background-color: #ff6600;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-orange:hover {
+    background-color: #e55c00;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.4);
+}
+
+/* Desain Card Dark Mode */
+.card-custom {
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255, 102, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.card-custom:hover {
+    transform: translateY(-6px);
+    border-color: #ff6600;
+    box-shadow: 0 8px 24px rgba(255, 102, 0, 0.25);
+}
+
+/* Navbar Active State */
+.nav-link {
+    color: #cccccc !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: #ff6600 !important;
+}
