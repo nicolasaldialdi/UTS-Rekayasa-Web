@@ -23,7 +23,7 @@
                             <div class="col-4 fw-bold text-white">Mata Kuliah:</div>
                             <div class="col-8 text-light">Rekayasa Web (UTS)</div>
                             <div class="col-4 fw-bold text-white">Program Studi:</div>
-                            <div class="col-8 text-light">Teknik Informatika / Sistem Informasi</div>
+                            <div class="col-8 text-light">Sistem Informasi</div>
                             <div class="col-4 fw-bold text-white">Tema Project:</div>
                             <div class="col-8 text-orange fw-semibold">Katalog Olahraga & Kegiatan</div>
                         </div>
