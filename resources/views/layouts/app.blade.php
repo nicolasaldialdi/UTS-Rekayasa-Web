@@ -9,55 +9,65 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+    /* 1. Animasi Masuk (Fade In & Slide Up) */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
         }
-        main { flex: 1; }
-        
-        .text-orange { color: #ff6600 !important; }
-        .bg-orange { background-color: #ff6600 !important; color: #fff; }
-        .border-orange { border-color: #ff6600 !important; }
-        
-        .btn-orange {
-            background-color: #ff6600;
-            color: #ffffff;
-            font-weight: 600;
-            border: none;
-            transition: all 0.3s ease;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .btn-orange:hover {
-            background-color: #e55c00;
-            color: #ffffff;
-            box-shadow: 0 0 15px rgba(255, 102, 0, 0.4);
-        }
-        
-        .card-custom {
-            background-color: #1e1e1e;
-            border: 1px solid rgba(255, 102, 0, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .card-custom:hover {
-            transform: translateY(-6px);
-            border-color: #ff6600;
-            box-shadow: 0 8px 24px rgba(255, 102, 0, 0.25);
-        }
+    }
 
-        .nav-link {
-            color: #cccccc !important;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #ff6600 !important;
-        }
-    </style>
+    .animate-fade-in {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-delay-1 { animation-delay: 0.15s; }
+    .animate-delay-2 { animation-delay: 0.3s; }
+
+    /* 2. Animasi Hover Efek pada Card */
+    .card-custom {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+    }
+
+    .card-custom:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 12px 25px rgba(255, 102, 0, 0.25) !important;
+        border-color: #ff6600 !important;
+    }
+
+    /* 3. Animasi Zoom pada Gambar Card */
+    .card-custom .card-img-top, 
+    .card-custom img {
+        transition: transform 0.5s ease;
+    }
+
+    .card-custom:hover .card-img-top,
+    .card-custom:hover img {
+        transform: scale(1.05);
+    }
+
+    .card-custom .overflow-hidden {
+        overflow: hidden;
+    }
+
+    /* 4. Animasi Tombol saat Hover */
+    .btn-orange-glow {
+        background-color: #ff6600 !important;
+        color: #ffffff !important;
+        border: none !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .btn-orange-glow:hover {
+        background-color: #e65c00 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4) !important;
+    }
+</style>
 </head>
 <body>
 
